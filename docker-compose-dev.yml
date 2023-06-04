@@ -1,11 +1,14 @@
 version: "3.9"
 services:
   server_node:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     links:
       - monguito
+    volumes: ./home/app  
   monguito:
     image: mongo
     ports:
