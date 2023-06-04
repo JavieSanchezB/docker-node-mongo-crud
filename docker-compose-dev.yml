@@ -8,7 +8,8 @@ services:
       - "3000:3000"
     links:
       - monguito
-    volumes: ./home/app  
+    volumes: 
+    - .:/home/app
   monguito:
     image: mongo
     ports:

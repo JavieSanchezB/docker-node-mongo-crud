@@ -9,4 +9,4 @@ WORKDIR /home/app
 
 EXPOSE 3000
 
-CMD ["nodemon","/index.js"]
+CMD ["nodemon","index.js"]
