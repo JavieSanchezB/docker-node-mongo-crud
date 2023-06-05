@@ -23,33 +23,66 @@ app.get('/crear/vaca', async (_req, res) => {
   await Animal.create({ tipo: 'Vaca', estado: 'Feliz' })
   return res.send('Creando una Vaca Felíz ....')
 })
+app.get('/actualizar/vaca', async (_req, res) => {
+  console.log('actualizando...')
+  await Animal.findOneAndUpdate({ tipo: 'Vaca', estado: 'Triste' })
+  return res.send('Actualizando una Vaca a estado Triste ....')
+})
+
+app.get('/borrar/vaca', async (_req, res) => {
+  console.log('borrando...')
+  await Animal.deleteOne({ tipo: 'vaca'})
+  return res.send('borrando una Vaca....')
+})
+
+
 app.get('/crear/perro', async (_req, res) => {
   console.log('creando...')
   await Animal.create({ tipo: 'Perro', estado: 'Feliz' })
-  return res.send('Creando una Perro Felíz ....')
+  return res.send('Creando un Perro....')
+})
+app.get('/actualizar/perro', async (_req, res) => {
+  console.log('actualizando...')
+  await Animal.deleteOne({ tipo: 'Perro', estado: 'Triste' })
+  return res.send('Actualizando Perro....')
+})
+app.get('/borrar/perro', async (_req, res) => {
+  console.log('borrando...')
+  await Animal.deleteOne({ tipo: 'Perro' })
+  return res.send('borrando Perro....')
 })
 app.get('/crear/gato', async (_req, res) => {
   console.log('creando...')
   await Animal.create({ tipo: 'Gato', estado: 'Feliz' })
-  return res.send('Creando un Gato Felíz ....')
+  return res.send('Creando un Gato....')
+})
+app.get('/actualizar/gato', async (_req, res) => {
+  console.log('actualizando...')
+  await Animal.deleteOne({ tipo: 'Gato', estado: 'Triste' })
+  return res.send('Actualizando Gato....')
+})
+app.get('/borrar/gato', async (_req, res) => {
+  console.log('borrando...')
+  await Animal.deleteOne({ tipo: 'Gato' })
+  return res.send('borrando Gato....')
 })
 
 app.get('/crear/caballo', async (_req, res) => {
   console.log('creando...')
   await Animal.create({ tipo: 'Caballo', estado: 'Feliz' })
-  return res.send('Creando un Caballo Felíz ....')
-})
-
-app.get('/borrar/caballo', async (_req, res) => {
-  console.log('borrando...')
-  await Animal.deleteOne({ tipo: 'Caballo', estado: 'Feliz' })
-  return res.send('borrando un Caballo Felíz ....')
+  return res.send('Creando un Caballo....')
 })
 
 app.get('/actualizar/caballo', async (_req, res) => {
   console.log('actualizando...')
   await Animal.findOneAndUpdate({ tipo: 'Caballo', estado: 'Triste' })
-  return res.send('Actualizando un Caballo Triste ....')
+  return res.send('Actualizando un Caballo....')
+})
+
+app.get('/borrar/caballo', async (_req, res) => {
+  console.log('borrando...')
+  await Animal.deleteOne({ tipo: 'Caballo' })
+  return res.send('borrando un Caballo....')
 })
 
 app.listen(3000, () => console.log('Servidor Online en el Pueto:3000'))
