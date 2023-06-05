@@ -16,5 +16,5 @@
 //para borrar un Animal en este caso el caballo
 #### http://localhost:3000/borrar/caballo
 
-tienes mas rutas //para crear un Animal que es Schema que esta creado si cambias al final de ruta a gato, vaca, perro 
+//tienes mas rutaspara crear un Animal que es Schema que esta creado si cambias al final de ruta a gato, vaca, perro 
 #### http://localhost:3000/crear/ANIMAL
