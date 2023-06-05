@@ -1,19 +1,21 @@
-version: "3.9"
+version: '3'
 services:
   server_node:
     build:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-      - "3000:3000"
+      - '3000:3000'
+    depends_on:
+      - server_mongo
     links:
-      - monguito
+      - server_mongo
     volumes: 
     - .:/home/app
-  monguito:
+  server_mongo:
     image: mongo
     ports:
-      - "27017:27017"
+      - '27017:27017'
     environment:
       - MONGO_INITDB_ROOT_USERNAME=javier
       - MONGO_INITDB_ROOT_PASSWORD=password

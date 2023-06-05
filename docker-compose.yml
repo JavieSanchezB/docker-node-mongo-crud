@@ -5,8 +5,8 @@ services:
     ports:
       - "3000:3000"
     links:
-      - monguito
-  monguito:
+      - server_mongo
+  server_mongo:
     image: mongo
     ports:
       - "27017:27017"
