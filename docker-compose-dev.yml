@@ -12,6 +12,7 @@ services:
       - server_mongo
     volumes: 
     - .:/home/app
+    - /home/app/node_modules
   server_mongo:
     image: mongo
     ports:
