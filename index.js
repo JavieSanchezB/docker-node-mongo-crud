@@ -21,7 +21,7 @@ app.get('/', async (_req, res) => {
 app.get('/crear/vaca', async (_req, res) => {
   console.log('creando...')
   await Animal.create({ tipo: 'Vaca', estado: 'Feliz' })
-  return res.send('Creando una Vaca Felíz ....')
+  return res.send('Creando una Vaca....')
 })
 app.get('/actualizar/vaca', async (_req, res) => {
   console.log('actualizando...')
@@ -85,4 +85,4 @@ app.get('/borrar/caballo', async (_req, res) => {
   return res.send('borrando un Caballo....')
 })
 
-app.listen(3000, () => console.log('Servidor Online en el Pueto:3000'))
+app.listen(3000, () => console.log('Servidor Escuchando en el Pueto:3000'))
